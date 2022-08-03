@@ -62,7 +62,7 @@
                     </a>
                     <ul class="menu-content">
                         <li>
-                            <a class="d-flex align-items-center" href="">
+                            <a class="d-flex align-items-center" href="{{ route('manage-class.index') }}">
                                 <i data-feather="square"></i>
                                 <span class="menu-item text-truncate"
                                     data-i18n="{{ __('Kelas') }}">{{ __('Kelas') }}
@@ -110,7 +110,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="d-flex align-items-center" href="">
+                            <a class="d-flex align-items-center" href="{{ route('manage-students.index') }}">
                                 <i data-feather="square"></i>
                                 <span class="menu-item text-truncate"
                                     data-i18n="{{ __('Siswa') }}">{{ __('Siswa') }}

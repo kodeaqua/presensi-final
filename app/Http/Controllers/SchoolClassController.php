@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\student;
+use App\Models\SchoolClass;
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class SchoolClassController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = student::get();
-        return view('contents.students', compact('students'));
+        $schoolclasses = SchoolClass::get();
+        return view('contents.schoolclasses', compact('schoolclasses'));
     }
 
     /**
@@ -42,10 +42,10 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\student  $student
+     * @param  \App\Models\SchoolClass  $schoolClass
      * @return \Illuminate\Http\Response
      */
-    public function show(student $student)
+    public function show(SchoolClass $schoolClass)
     {
         //
     }
@@ -53,10 +53,10 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\student  $student
+     * @param  \App\Models\SchoolClass  $schoolClass
      * @return \Illuminate\Http\Response
      */
-    public function edit(student $student)
+    public function edit(SchoolClass $schoolClass)
     {
         //
     }
@@ -65,10 +65,10 @@ class StudentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\student  $student
+     * @param  \App\Models\SchoolClass  $schoolClass
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, student $student)
+    public function update(Request $request, SchoolClass $schoolClass)
     {
         //
     }
@@ -76,10 +76,10 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\student  $student
+     * @param  \App\Models\SchoolClass  $schoolClass
      * @return \Illuminate\Http\Response
      */
-    public function destroy(student $student)
+    public function destroy(SchoolClass $schoolClass)
     {
         //
     }

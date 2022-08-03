@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\SchoolClassController;
 use App\Http\Controllers\MajorController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\YearController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,6 +29,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::middleware(['auth:sanctum', 'verified'])->resource('manage-class', SchoolClassController::class);
+
 Route::middleware(['auth:sanctum', 'verified'])->resource('manage-majors', MajorController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->resource('manage-courses', CourseController::class);
@@ -36,3 +40,7 @@ Route::middleware(['auth:sanctum', 'verified'])->resource('manage-levels', Level
 Route::middleware(['auth:sanctum', 'verified'])->resource('manage-years', YearController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->resource('manage-users', UserController::class);
+
+Route::middleware(['auth:sanctum', 'verified'])->resource('manage-students', StudentController::class);
+
+
